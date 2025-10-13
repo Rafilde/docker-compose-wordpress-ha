@@ -10,15 +10,6 @@ Este projeto implementa uma arquitetura WordPress de alta disponibilidade usando
 
 ---
 
-## Como Iniciar
-
-**Pré-requisito:** Docker e Docker Compose instalados.
-
-1. Abra um terminal na pasta raiz deste projeto.
-2. Execute o comando para iniciar todos os contêineres em segundo plano:
-   ```bash
-   docker-compose up -d
-
 ## 🚀 Iniciar o Ambiente
 Para iniciar todos os contêineres em segundo plano:
 
