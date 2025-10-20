@@ -72,6 +72,22 @@ services:
     networks:
       - app-network
 
+  locust:
+      image: grubykarol/locust:latest
+      container_name: locust_tester
+      ports:
+        - "8089:8089"
+      environment:
+        - ATTACKED_HOST=http://nginx
+        - LOCUST_FILE=/locust/scenario1.py
+      volumes:
+        - ./locust-scripts:/locust
+      networks:
+        - app-network
+      depends_on:
+        - nginx
+      restart: unless-stopped
+
 volumes:
   db_data:
   wordpress_data: 
