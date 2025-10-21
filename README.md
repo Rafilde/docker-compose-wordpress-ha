@@ -70,3 +70,9 @@ docker-compose down
 ```bash
 docker-compose down -v
 ```
+
+## 🧪 Demonstração
+
+A imagem abaixo mostra o ambiente Docker em execução com Nginx, WordPress e MySQL funcionando corretamente:
+
+![Demonstração do projeto rodando no Docker Compose](./assets/img-curl.png)
