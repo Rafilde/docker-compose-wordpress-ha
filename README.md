@@ -234,9 +234,5 @@ Esses parâmetros podem ser ajustados diretamente no comando de execução do **
 A imagem abaixo mostra o gráfico gerado
 
 ![Demonstração do projeto rodando no Docker Compose](./assets/grafico_tempo_resposta.png)
-
-
-taxa de falhas, tamanho da resposta
-
-O que posso fazer já que meu computaodr não é tçao robusto 
-https://image.pi7.org/download-compress-image/en 
+![Demonstração do projeto rodando no Docker Compose](./assets/grafico_tamanho_resposta.png)
+![Demonstração do projeto rodando no Docker Compose](./assets/grafico_taxa_falha.png)
