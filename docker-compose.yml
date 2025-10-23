@@ -27,43 +27,43 @@ services:
     networks:
       - app-network
 
-  wordpress2:
-    image: wordpress:5.4.2-php7.2-apache
-    container_name: wordpress2
-    depends_on:
-      - db
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpressuser
-      WORDPRESS_DB_PASSWORD: wordpresspassword
-      WORDPRESS_DB_NAME: wordpress
-    volumes:
-      - wordpress_data:/var/www/html
-    networks:
-      - app-network
+  # wordpress2:
+  #   image: wordpress:5.4.2-php7.2-apache
+  #   container_name: wordpress2
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     WORDPRESS_DB_HOST: db:3306
+  #     WORDPRESS_DB_USER: wordpressuser
+  #     WORDPRESS_DB_PASSWORD: wordpresspassword
+  #     WORDPRESS_DB_NAME: wordpress
+  #   volumes:
+  #     - wordpress_data:/var/www/html
+  #   networks:
+  #     - app-network
 
-  wordpress3:
-    image: wordpress:5.4.2-php7.2-apache
-    container_name: wordpress3
-    depends_on:
-      - db
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpressuser
-      WORDPRESS_DB_PASSWORD: wordpresspassword
-      WORDPRESS_DB_NAME: wordpress
-    volumes:
-      - wordpress_data:/var/www/html 
-    networks:
-      - app-network
+  # wordpress3:
+  #   image: wordpress:5.4.2-php7.2-apache
+  #   container_name: wordpress3
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     WORDPRESS_DB_HOST: db:3306
+  #     WORDPRESS_DB_USER: wordpressuser
+  #     WORDPRESS_DB_PASSWORD: wordpresspassword
+  #     WORDPRESS_DB_NAME: wordpress
+  #   volumes:
+  #     - wordpress_data:/var/www/html 
+  #   networks:
+  #     - app-network
 
   nginx:
     image: nginx:1.19.0
     container_name: nginx_lb
     depends_on:
       - wordpress1
-      - wordpress2
-      - wordpress3
+      # - wordpress2
+      # - wordpress3
     ports:
       - "80:80"
     volumes:
@@ -79,7 +79,7 @@ services:
         - "8089:8089"
       environment:
         - ATTACKED_HOST=http://nginx
-        - LOCUST_FILE=/locust/scenario3.py
+        - LOCUST_FILE=/locust/scenario1.py
       volumes:
         - ./locust-scripts:/locust
       networks:
