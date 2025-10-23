@@ -231,9 +231,8 @@ Esses parâmetros podem ser ajustados diretamente no comando de execução do **
 
 ## 🧪 Demonstração
 
-A imagem abaixo mostra os gráficos gerados
+A imagem abaixo mostra o gráfico gerado
 
-![Demonstração do projeto rodando no Docker Compose](./assets/grafico_rps.png)
 ![Demonstração do projeto rodando no Docker Compose](./assets/grafico_tempo_resposta.png)
 
 

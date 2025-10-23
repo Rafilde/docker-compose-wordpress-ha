@@ -91,30 +91,31 @@ try:
 except Exception as e:
     print(f"Erro ao gerar o Gráfico 1: {e}")
 
-try:
-    g2 = sns.catplot(
-        data=df_consolidado,
-        x='Instancias',         
-        y='RPS',                 
-        hue='Usuarios',          
-        col='Cenario',          
-        kind='bar',
-        palette=my_palette,     
-        height=5,
-        aspect=1,
-        legend_out=True,
-        sharey=False
-    )
-    g2.fig.suptitle('Requisições por Segundo (RPS) vs. Número de Instâncias', y=1.05)
-    g2.set_axis_labels('Número de Instâncias', 'Requisições por Segundo (RPS)')
-    g2.set_titles("{col_name}")
-    g2._legend.set_title('Usuários')
+# Mostrar apenas um dos gráficos
+# try:
+#     g2 = sns.catplot(
+#         data=df_consolidado,
+#         x='Instancias',         
+#         y='RPS',                 
+#         hue='Usuarios',          
+#         col='Cenario',          
+#         kind='bar',
+#         palette=my_palette,     
+#         height=5,
+#         aspect=1,
+#         legend_out=True,
+#         sharey=False
+#     )
+#     g2.fig.suptitle('Requisições por Segundo (RPS) vs. Número de Instâncias', y=1.05)
+#     g2.set_axis_labels('Número de Instâncias', 'Requisições por Segundo (RPS)')
+#     g2.set_titles("{col_name}")
+#     g2._legend.set_title('Usuários')
     
-    plt.savefig("grafico_rps.png", bbox_inches='tight')
-    print("Gráfico 'grafico_rps.png' salvo com sucesso.")
-    plt.close()
+#     plt.savefig("grafico_rps.png", bbox_inches='tight')
+#     print("Gráfico 'grafico_rps.png' salvo com sucesso.")
+#     plt.close()
 
-except Exception as e:
-    print(f"Erro ao gerar o Gráfico 2: {e}")
+# except Exception as e:
+#     print(f"Erro ao gerar o Gráfico 2: {e}")
 
 print("\nProcesso concluído.")
