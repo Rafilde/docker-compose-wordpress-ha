@@ -79,7 +79,7 @@ services:
         - "8089:8089"
       environment:
         - ATTACKED_HOST=http://nginx
-        - LOCUST_FILE=/locust/scenario3.py
+        - LOCUST_FILE=/locust/scenario1.py
       volumes:
         - ./locust-scripts:/locust
       networks:
