@@ -7,4 +7,3 @@ class WordpressUserBehavior(TaskSet):
 
 class WebsiteUser(HttpUser):
     tasks = [WordpressUserBehavior]
-    wait_time = between(1, 5) 

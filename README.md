@@ -238,6 +238,6 @@ A imagem abaixo mostra os gráficos gerados
 
 
 taxa de falhas, tamanho da resposta
-imagem de 1mb analisar
+
 O que posso fazer já que meu computaodr não é tçao robusto 
 https://image.pi7.org/download-compress-image/en 
